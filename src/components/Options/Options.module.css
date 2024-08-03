@@ -1,0 +1,9 @@
+.buttons{
+    display: flex;
+    gap: 12px;
+}
+.buttons button{
+    background-color: rgb(159, 166, 166);
+    border: 2px solid #181717;
+    color: #181717;
+}
