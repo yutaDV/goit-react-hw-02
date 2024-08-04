@@ -39,18 +39,11 @@ function App() {
       <Feedback 
         onLeaveFeedback={updateFeedback} 
         onReset={handleReset} 
-        totalFeedback={totalFeedback} 
+        feedback={feedback}
+        totalFeedback={totalFeedback}
+        positiveFeedbackPercentage={positiveFeedbackPercentage}
       />
-      {totalFeedback > 0 ? (
-        <>
-          <h2>Statistics</h2>
-          <p>Good: {feedback.good}</p>
-          <p>Neutral: {feedback.neutral}</p>
-          <p>Bad: {feedback.bad}</p>
-          <p>Total: {totalFeedback}</p>
-          <p>Positive feedback: {positiveFeedbackPercentage}%</p>
-        </>
-      ) : (
+      {totalFeedback === 0 && (
         <Notification message="No feedback given" />
       )}
     </>
